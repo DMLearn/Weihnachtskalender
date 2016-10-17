@@ -10,4 +10,4 @@ Funktionalität:
 
 3) Die Information ob ein Kalendertürschen bereits geöffnet war, wird in einer .xml Datei abgelegt. Der Unterscheid zwischen einem geöffneten und geschlossenem Türschen wird graphisch kennbar gemacht.
 
-4) Das Hauptfesnter hat insgesamt die einzelnen 24 Türschen für die einzelnen Tage. Eine Textbox mit dem aktuellen Datum und einem schicken Weihnachtsmann im Hintergrung :-)
+4) Das Hauptfesnter hat insgesamt die einzelnen 24 Türschen für die einzelnen Tage. Eine Textbox mit dem aktuellen Datum und einem schicken Weihnachtsmann im Hintergrund :-)

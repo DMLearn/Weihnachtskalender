@@ -1,0 +1,93 @@
+﻿
+***Basis Anforderung***
+------------------------------
+------------------------------
+
+
+Titel: Starten
+--------------
+Story: Als Benutzer möchte ich, dass das Programm schnell startet damit schnell und effizient arbeiten kann.
+
+Akzeptanzkriterien: 
+• Programm startet innerhalb von 3 Sekunden
+• Programm kann von Windows 7 bis 10 ohne zusätzliche Anwendungen ausgeführt werden
+
+Status: 
+• offen
+
+
+Titel: Beenden
+--------------
+Story: Als Benutzer möchte ich, dass das Programm eindeutig beenden können.
+
+Akzeptanzkriterien: 
+• Im rechten oberen Fensterrand ist in "X" zum Beenden der Anwendung sichtbar. 
+• Wenn ich "X" drücke, wird das Programm ohne weitere Hinweise beendet.
+
+Status: 
+• offen
+
+
+Titel: Makieren bereits geöffneter Kalendertürschen
+--------------
+Story: Als Benutzer möchte ich, dass die Türchen welche bereits geöffnet werden, optisch makiert sind.
+
+Akzeptanzkriterien: 
+• Geschlossene Türschen sind rot zu makieren und die Schriftfont ist dick ausgeführt.
+• Offene Türschen sind grün makiert und die Schriftfont ist auf normal gesetzt.
+
+Status: 
+• offen
+
+
+Titel: In der Zukunft liegende Kalendertürschen 
+--------------
+Story: Als Benutzer möchte ich, dass ich Kalendertürschen die in der Zukunft liegen nicht öffnen kann.
+
+Akzeptanzkriterien: 
+• Abruf des aktuellen Datums via HTTP Request oder der Systemzeit. Implementieren eines Sicherheitsfeatures für zukünftige Kalendertürschen.
+• Wird ein falsches Datum ausgewählt öffnet sich ein neues Fenster, mit einem lustigen Hinweis auf den Betrugsversuch.
+
+Status: 
+• offen
+
+
+Titel: Aktuelles Türschen
+--------------
+Story: Als Benutzer möchte ich, dass aktuelle Türschen öffnen können.
+
+Akzeptanzkriterien: 
+• Durch Druck auf das aktuelle Datum im Kalender öffnet sich ein neues Fenster. 
+  Dies kann enthalten:
+		- Schönes Bild von der Familie aus dem aktuellen Jahr.
+		- Ein schönes Gedicht oder ein lustigen Spruch.
+		- Ein lustiges Video. 		
+
+Status: 
+• offen
+
+
+Titel: ObjektOrientierung
+----------------
+Story: Als Entwickler möchte ich den Quellcode sauber strukturieren, um später weitere Funktionalitäten hinzufügen zu können.
+
+Akzeptanzkriterium:
+• Die Aufteilung der Funktionalitäten auf Klassen folgt dem Prinzip Seperation of Concerns (SoC)
+• Bei der Erstellung der Klassen und Methoden wird das Prinzip Don't Repeat Yourself (DRY) eingehalten
+
+Hinweis: Diese Story ist eine Erweiterung zu Story "Softwareentwicklung"
+
+Status:
+• offen
+
+
+ Titel:Softwarestruktur
+---------------
+Story: Als Entwickler möchte ich den Quellcode sauber strukturieren, um später weiter Funktionalitäten hinzufügen zu können.
+
+Akzeptanzkriterien: 
+• Das "Single Level of Abstraction" Prinzip wird eingehalten, oder ein Abweichung ist begründet und dokumentiert.
+
+Status: 
+• offen
+

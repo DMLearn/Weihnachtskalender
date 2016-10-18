@@ -31,6 +31,7 @@ namespace Weihnachtskalender
         {
             textBoxSystemDate.FontSize = 20;
             textBoxSystemDate.Text = dateHandler.systemDate;
+            dateHandler.readXML();
 
         }
     }

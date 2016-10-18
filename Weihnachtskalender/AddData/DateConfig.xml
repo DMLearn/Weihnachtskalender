@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dates>
+  <date id="1.12" status="locked"/>
+  <date id="2.12" status="locked"/>
+  <date id="3.12" status="opened"/>
+  <date id="4.12" status="opened"/>
+  <date id="5.12" status="locked"/>
+</dates>

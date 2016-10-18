@@ -27,6 +27,12 @@ namespace Weihnachtskalender
 
         private void getNTPDate_OnClick( object sender, RoutedEventArgs e )
         {
+            DateHandler actualDate = new DateHandler();
+
+        }
+
+        private void getSystemDate_OnClick(object sender, RoutedEventArgs e)
+        {
 
         }
     }

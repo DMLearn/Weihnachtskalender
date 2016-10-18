@@ -20,21 +20,17 @@ namespace Weihnachtskalender
     /// </summary>
     public partial class MainWindow : Window
     {
+        public DateHandler dateHandler = new DateHandler();
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void getNTPDate_OnClick( object sender, RoutedEventArgs e )
-        {
-            DateHandler actualDate = new DateHandler();
-
-        }
-
         private void getSystemDate_OnClick(object sender, RoutedEventArgs e)
         {
             textBoxSystemDate.FontSize = 20;
-            textBoxSystemDate.Text = DateTime.Now.ToString();
+            textBoxSystemDate.Text = dateHandler.systemDate;
 
         }
     }

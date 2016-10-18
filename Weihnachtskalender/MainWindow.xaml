@@ -5,9 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Weihnachtskalender"
         mc:Ignorable="d"
-        Title="Projekt-X" Height="800" Width="800">
+        Title="Projekt-X" Height="400" Width="800">
 
-    <Grid>
-        <Rectangle Fill="Beige"/>
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width ="400"/>
+            <ColumnDefinition Width ="400"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" Grid.Column="0" x:Name="buttonGetNTPDate" Click="getNTPDate_OnClick" Content="Get Date from NTP" Width="200" FontSize="20"/>
+        <Button Grid.Row="0" Grid.Column="1" x:Name="buttonGetSystemDate" Click="getNTPDate_OnClick" Content="Get Date from System" Width="200" FontSize="20"/>
+        <TextBox Grid.Row="1" Grid.Column="0" x:Name="textBoxNTPDate" Visibility="Visible" Margin="10" Width="200"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="textBoxSystemDate" Visibility="Visible" Margin="10" Width="200"/>
+
+
     </Grid>
 </Window>

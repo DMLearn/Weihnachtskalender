@@ -24,5 +24,10 @@ namespace Weihnachtskalender
         {
             InitializeComponent();
         }
+
+        private void getNTPDate_OnClick( object sender, RoutedEventArgs e )
+        {
+
+        }
     }
 }

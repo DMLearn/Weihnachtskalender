@@ -33,6 +33,8 @@ namespace Weihnachtskalender
 
         private void getSystemDate_OnClick(object sender, RoutedEventArgs e)
         {
+            textBoxSystemDate.FontSize = 20;
+            textBoxSystemDate.Text = DateTime.Now.ToString();
 
         }
     }

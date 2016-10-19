@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Weihnachtskalender"
         mc:Ignorable="d"
-        Title="Projekt-X" Height="447" Width="399">
+        Title="Projekt-X" Height="447" Width="500">
 
     <Grid Margin="20" HorizontalAlignment="Left">
         <Grid.RowDefinitions>
@@ -15,9 +15,8 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width ="400"/>
         </Grid.ColumnDefinitions>
-        <Button HorizontalAlignment="Left" Grid.Row="0" x:Name="buttonGetSystemDate" Click="getSystemDate_OnClick" Content="Get Date from System" Width="200" FontSize="20" Margin="80,0,0,0"/>
-        <TextBox HorizontalAlignment="Left" Grid.Row="1" x:Name="textBoxSystemDate" Visibility="Visible" Width="200" Height="50" VerticalAlignment="Top" Margin="80,10,0,0"/>
-        <ListBox HorizontalAlignment="Left" Grid.Row="1" x:Name="listBoxXML" Visibility="Visible" Width="300" Margin="25,74,0,-14"/>
+        <Button HorizontalAlignment="Center" Grid.Row="0" x:Name="btnLockAddData" Click="lockAddData_OnClick" Content="Lock Add Data Folder" Width="250" Height="50" FontSize="20" Margin="0,0,0,0"/>
+        <Button HorizontalAlignment="Center" Grid.Row="1" x:Name="btnUnlockAddData" Click="unlockAddData_OnClick" Content="Unlock Add Data Folder" Width="250" Height="50" FontSize="20" Margin="0,0,0,0"/>
 
     </Grid>
 </Window>

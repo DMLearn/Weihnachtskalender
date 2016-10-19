@@ -20,19 +20,21 @@ namespace Weihnachtskalender
     /// </summary>
     public partial class MainWindow : Window
     {
-        public DateHandler dateHandler = new DateHandler();
+        public AddDataHandler addDataHandler = new AddDataHandler();
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void getSystemDate_OnClick(object sender, RoutedEventArgs e)
+        private void lockAddData_OnClick( object sender, RoutedEventArgs e )
         {
-            textBoxSystemDate.FontSize = 20;
-            textBoxSystemDate.Text = dateHandler.systemDate;
-            dateHandler.readXML();
+            addDataHandler.lockAddData();
+        }
 
+        private void unlockAddData_OnClick( object sender, RoutedEventArgs e )
+        {
+            addDataHandler.unlockAddData();
         }
     }
 }

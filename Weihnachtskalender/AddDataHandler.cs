@@ -30,7 +30,24 @@ namespace Weihnachtskalender
 
         private void readXML()
         {
-            XmlDocument doc = new XmlDocument();
+            try
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(_addDataFolderPath + "\\DateConfig.xml");
+
+                foreach (XmlNode node in doc.DocumentElement)
+                {
+                    string id = node.Attributes[0].Value;
+                    string status = node.Attributes[1].Value;
+                    Console.WriteLine("Date: {0}, Status: {1}", id, status);
+                }
+
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Error: Couldn't read DateConfig.xml"); ;
+            }
+
         }
 
         public void lockAddData()

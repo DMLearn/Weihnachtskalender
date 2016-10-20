@@ -2,7 +2,26 @@
 <root>
   <date id="1.12" status="locked"/>
   <date id="2.12" status="locked"/>
-  <date id="3.12" status="opened"/>
-  <date id="4.12" status="opened"/>
+  <date id="3.12" status="locked"/>
+  <date id="4.12" status="locked"/>
   <date id="5.12" status="locked"/>
+  <date id="6.12" status="locked"/>
+  <date id="7.12" status="locked"/>
+  <date id="8.12" status="locked"/>
+  <date id="9.12" status="locked"/>
+  <date id="10.12" status="locked"/>
+  <date id="11.12" status="locked"/>
+  <date id="12.12" status="locked"/>
+  <date id="13.12" status="locked"/>
+  <date id="14.12" status="locked"/>
+  <date id="15.12" status="locked"/>
+  <date id="16.12" status="locked"/>
+  <date id="17.12" status="locked"/>
+  <date id="18.12" status="locked"/>
+  <date id="19.12" status="locked"/>
+  <date id="20.12" status="locked"/>
+  <date id="21.12" status="locked"/>
+  <date id="22.12" status="locked"/>
+  <date id="23.12" status="locked"/>
+  <date id="24.12" status="locked"/>
 </root>

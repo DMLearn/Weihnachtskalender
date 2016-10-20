@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Xml;
 using System.IO;
 using System.Security.AccessControl;
@@ -34,18 +31,18 @@ namespace Weihnachtskalender
             {
                 XmlDocument doc = new XmlDocument();
                 doc.Load(_addDataFolderPath + "\\DateConfig.xml");
-
+                xmlDateList = doc.SelectNodes("root");
                 foreach (XmlNode node in doc.DocumentElement)
                 {
                     string id = node.Attributes[0].Value;
                     string status = node.Attributes[1].Value;
-                    Console.WriteLine("Date: {0}, Status: {1}", id, status);
+                    Debug.WriteLine("Date: {0}, Status: {1}", id, status);
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error: Couldn't read DateConfig.xml"); ;
+                throw new System.IO.FileNotFoundException( "Error reading .xml config file", ex );
             }
 
         }
@@ -64,7 +61,7 @@ namespace Weihnachtskalender
 
             DirectorySecurity ds = Directory.GetAccessControl( _addDataFolderPath );
             FileSystemAccessRule fsa = new FileSystemAccessRule( _adminUserName, FileSystemRights.FullControl, AccessControlType.Deny );
-            ds.RemoveAccessRule( fsa );
+            ds.RemoveAccessRuleAll( fsa );
             Directory.SetAccessControl( _addDataFolderPath, ds );
         }
     }

@@ -35,7 +35,6 @@ namespace Weihnachtskalender
         private void unlockAddData_OnClick( object sender, RoutedEventArgs e )
         {
             addDataHandler.unlockAddData();
-
         }
     }
 }

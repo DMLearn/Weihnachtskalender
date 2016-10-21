@@ -24,17 +24,7 @@ namespace Weihnachtskalender
 
         public MainWindow()
         {
-            InitializeComponent();
-        }
-
-        private void lockAddData_OnClick( object sender, RoutedEventArgs e )
-        {
-            addDataHandler.lockAddData();
-        }
-
-        private void unlockAddData_OnClick( object sender, RoutedEventArgs e )
-        {
-            addDataHandler.unlockAddData();
+            InitializeComponent();           
         }
     }
 }

@@ -28,6 +28,10 @@ namespace Weihnachtskalender
 
         private void readXML()
         {
+            //TODO: For release activate unlockAddData() and lockAddDAta()
+            //unlockAddData();
+            
+            #region try and catch xml error
             try
             {
                 XmlDocument doc = new XmlDocument();
@@ -46,6 +50,9 @@ namespace Weihnachtskalender
             {
                 throw new System.IO.FileNotFoundException( "Error reading .xml config file", ex );
             }
+            #endregion
+
+            //lockAddData();
 
         }
 

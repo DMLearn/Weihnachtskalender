@@ -135,8 +135,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>echo | rmdir /S /Q "$(TargetDir)AddData"
-echo V | xcopy /E /Y "$(ProjectDir)AddData" "$(TargetDir)AddData"</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEvent>

@@ -91,3 +91,16 @@ Akzeptanzkriterien:
 Status: 
 • offen
 
+
+ Titel:Zugriff auf AddData
+---------------
+Story: Als Entwickler möchte ich das die zusätzlichen Daten für den Anwender nicht zugänglich sind.
+
+Akzeptanzkriterien: 
+• Der Ordner ist für den Anwender mit einem Zugriffsverweigerung versehen.
+• Die Zugriffsverweigerung kann nur durch die Anwendung bzw. ein kleines Entwicklertool (unlockAddData.exe) aufegschlossen werden.
+
+Status: 
+• impelementiert
+• getestet
+• abgeschlossen

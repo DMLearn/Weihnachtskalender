@@ -4,19 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Weihnachtskalender"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
         mc:Ignorable="d"
         Title="Projekt-X" Height="447" Width="500">
-
-    <Grid Margin="20" HorizontalAlignment="Left">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="250"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width ="400"/>
-        </Grid.ColumnDefinitions>
-        <Button HorizontalAlignment="Center" Grid.Row="0" x:Name="btnLockAddData" Click="lockAddData_OnClick" Content="Lock Add Data Folder" Width="250" Height="50" FontSize="20" Margin="0,0,0,0"/>
-        <Button HorizontalAlignment="Center" Grid.Row="1" x:Name="btnUnlockAddData" Click="unlockAddData_OnClick" Content="Unlock Add Data Folder" Width="250" Height="50" FontSize="20" Margin="0,0,0,0"/>
-
+    <Window.Resources>
+        <Style x:Key="BtnStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="Segoe"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Background" Value="Bisque"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Button x:Name="day1" Content="1" Style="{StaticResource BtnStyle}" Margin="195,280,257,96"/>
+        <Button x:Name="day2" Content="2" Style="{StaticResource BtnStyle}" Margin="300,196,152,180"/>
+        <Button x:Name="day3" Content="3" Style="{StaticResource BtnStyle}" Margin="345,66,107,310"/>
+        <Button x:Name="day4" Content="4" Style="{StaticResource BtnStyle}" Margin="100,145,352,231"/>
+        <Button x:Name="day5" Content="5" Style="{StaticResource BtnStyle}" Margin="215,37,237,339"/>
     </Grid>
+    
 </Window>

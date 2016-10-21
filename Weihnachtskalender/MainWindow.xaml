@@ -21,7 +21,7 @@
     <Grid>
         <Button x:Name="day1" Content="1" Style="{StaticResource BtnStyle}" Margin="195,280,257,96"/>
         <Button x:Name="day2" Content="2" Style="{StaticResource BtnStyle}" Margin="300,196,152,180"/>
-        <Button x:Name="day3" Content="3" Style="{StaticResource BtnStyle}" Margin="345,66,107,310"/>
+        <Button x:Name="day3" Content="3" Style="{StaticResource BtnStyle}" Margin="345,66,107,310" BorderThickness="1"/>
         <Button x:Name="day4" Content="4" Style="{StaticResource BtnStyle}" Margin="100,145,352,231"/>
         <Button x:Name="day5" Content="5" Style="{StaticResource BtnStyle}" Margin="215,37,237,339"/>
     </Grid>

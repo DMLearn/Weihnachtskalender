@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
 using System.Xml;
 using System.IO;
 using System.Security.AccessControl;
+using System.Collections.Generic;
 
 namespace Weihnachtskalender
 {
     public class AddDataHandler
     {
 
-        public XmlNodeList xmlDateList { get; private set; }
+        private List<Tuple<string, bool>> _datesList = new List<Tuple<string, bool>>();          
         private string _addDataFolderPath;
         private string _addDataPictureFolderPath;
         private string _adminUserName; 
@@ -17,7 +19,6 @@ namespace Weihnachtskalender
 
         public AddDataHandler()
         {
-            xmlDateList = null;
             _addDataFolderPath = Directory.GetCurrentDirectory() + "\\AddData";
             _addDataPictureFolderPath = _addDataFolderPath + "\\Picture";
             _adminUserName = Environment.UserName;
@@ -31,12 +32,13 @@ namespace Weihnachtskalender
             {
                 XmlDocument doc = new XmlDocument();
                 doc.Load(_addDataFolderPath + "\\DateConfig.xml");
-                xmlDateList = doc.SelectNodes("root");
+
                 foreach (XmlNode node in doc.DocumentElement)
                 {
                     string id = node.Attributes[0].Value;
-                    string status = node.Attributes[1].Value;
-                    Debug.WriteLine("Date: {0}, Status: {1}", id, status);
+                    bool locked = Convert.ToBoolean(node.Attributes[1].Value);
+                    _datesList.Add(new Tuple<string, bool> (id, locked));
+                        
                 }
 
             }

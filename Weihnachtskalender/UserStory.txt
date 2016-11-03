@@ -98,7 +98,7 @@ Story: Als Entwickler möchte ich das die zusätzlichen Daten für den Anwender 
 
 Akzeptanzkriterien: 
 • Der Ordner ist für den Anwender mit einem Zugriffsverweigerung versehen.
-• Die Zugriffsverweigerung kann nur durch die Anwendung bzw. ein kleines Entwicklertool (unlockAddData.exe) aufegschlossen werden.
+• Die Zugriffsverweigerung kann nur durch die Anwendung bzw. ein kleines Entwicklertool (unlockAddData.exe) aufgeschlossen werden.
 
 Status: 
 • impelementiert

@@ -11,37 +11,35 @@ namespace Weihnachtskalender
     public class AddDataHandler
     {
 
-        private List<Tuple<string, bool>> _datesList = new List<Tuple<string, bool>>();          
+        public List<Tuple<string, bool>> datesList = new List<Tuple<string, bool>>();          
         private string _addDataFolderPath;
         private string _addDataPictureFolderPath;
+        private string _addDataDateConfigXMLPath;
         private string _adminUserName; 
 
 
+        //Konstrutur
         public AddDataHandler()
         {
             _addDataFolderPath = Directory.GetCurrentDirectory() + "\\AddData";
             _addDataPictureFolderPath = _addDataFolderPath + "\\Picture";
+            _addDataDateConfigXMLPath = _addDataFolderPath + "\\DateConfig.xml";
             _adminUserName = Environment.UserName;
-
-            readXML();
         }
 
-        private void readXML()
-        {
-            //TODO: For release activate unlockAddData() and lockAddDAta()
-            //unlockAddData();
-            
-            #region try and catch xml error
+        public void readXML()
+        {    
+            #region try open xml and catch error
             try
             {
                 XmlDocument doc = new XmlDocument();
-                doc.Load(_addDataFolderPath + "\\DateConfig.xml");
+                doc.Load(_addDataDateConfigXMLPath);
 
                 foreach (XmlNode node in doc.DocumentElement)
                 {
                     string id = node.Attributes[0].Value;
                     bool locked = Convert.ToBoolean(node.Attributes[1].Value);
-                    _datesList.Add(new Tuple<string, bool> (id, locked));
+                    datesList.Add(new Tuple<string, bool> (id, locked));
                         
                 }
 
@@ -51,9 +49,18 @@ namespace Weihnachtskalender
                 throw new System.IO.FileNotFoundException( "Error reading .xml config file", ex );
             }
             #endregion
+        }
 
-            //lockAddData();
+        public  void writeXML()
+        {
+            #region
+            XmlDocument doc = new XmlDocument();
+            doc.Load( _addDataDateConfigXMLPath );
 
+            //TODO: Continue the implementation for the update method for
+            //      the xml file based on changes in the datesList
+
+            #endregion
         }
 
         public void lockAddData()

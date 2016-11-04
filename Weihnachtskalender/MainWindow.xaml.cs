@@ -20,11 +20,13 @@ namespace Weihnachtskalender
     /// </summary>
     public partial class MainWindow : Window
     {
-        public AddDataHandler addDataHandler = new AddDataHandler();
+        AddDataHandler addData = new AddDataHandler();
 
         public MainWindow()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            addData.readXML();
+            addData.writeXML();   
         }
     }
 }

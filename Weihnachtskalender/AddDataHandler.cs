@@ -39,8 +39,7 @@ namespace Weihnachtskalender
                 {
                     string id = node.Attributes[0].Value;
                     bool locked = Convert.ToBoolean(node.Attributes[1].Value);
-                    datesList.Add(new Tuple<string, bool> (id, locked));
-                        
+                    datesList.Add(new Tuple<string, bool> (id, locked));                 
                 }
 
             }
@@ -53,13 +52,25 @@ namespace Weihnachtskalender
 
         public  void writeXML()
         {
-            #region
-            XmlDocument doc = new XmlDocument();
-            doc.Load( _addDataDateConfigXMLPath );
+            # region try writing to xml and catch error
+            try
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(_addDataDateConfigXMLPath);
 
-            //TODO: Continue the implementation for the update method for
-            //      the xml file based on changes in the datesList
-
+                foreach (Tuple<string, bool> tuple in datesList)
+                {
+                    string id = tuple.Item1;
+                    string nodePath = "/dates/date[@id='" + id + "']";
+                    XmlNode node = doc.SelectSingleNode(nodePath);
+                    node.Attributes["locked"].Value = tuple.Item2.ToString();
+                }
+                doc.Save(_addDataDateConfigXMLPath);
+            }
+            catch (Exception ex)
+            {
+                throw new System.IO.FileNotFoundException("Error reading .xml config file", ex); ;
+            }
             #endregion
         }
 

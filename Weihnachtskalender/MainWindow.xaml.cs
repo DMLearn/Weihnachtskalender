@@ -20,13 +20,20 @@ namespace Weihnachtskalender
     /// </summary>
     public partial class MainWindow : Window
     {
-        AddDataHandler addData = new AddDataHandler();
+        Controller controller = new Controller();
 
+        //Konstruktor
         public MainWindow()
         {
-            InitializeComponent();
-            addData.readXML();
-            addData.writeXML();   
+            InitializeComponent();     
         }
+
+        //Button pressed
+        private void btn_Clicked (object sender, RoutedEventArgs e)
+        {
+            int tag = Convert.ToInt16(((Button)sender).Tag);
+            controller.start(tag);
+        }
+        
     }
 }

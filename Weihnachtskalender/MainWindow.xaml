@@ -20,8 +20,8 @@
     </Window.Resources>
     <Grid>
         <Button x:Name="day1" Content="1" Style="{StaticResource BtnStyle}" Margin="195,280,257,96" Click="btn_Clicked" Tag="1"/>
-        <Button x:Name="day2" Content="2" Style="{StaticResource BtnStyle}" Margin="300,196,152,180" Click="btn_Clicked" Tag="2"/>
-        <Button x:Name="day3" Content="3" Style="{StaticResource BtnStyle}" Margin="345,66,107,310" Click="btn_Clicked" Tag="3"/>
+        <Button x:Name="day2" Content="6" Style="{StaticResource BtnStyle}" Margin="300,196,152,180" Click="btn_Clicked" Tag="6"/>
+        <Button x:Name="day3" Content="10" Style="{StaticResource BtnStyle}" Margin="345,66,107,310" Click="btn_Clicked" Tag="10"/>
         <Button x:Name="day4" Content="4" Style="{StaticResource BtnStyle}" Margin="100,145,352,231" Click="btn_Clicked" Tag="4"/>
         <Button x:Name="day5" Content="5" Style="{StaticResource BtnStyle}" Margin="215,37,237,339" Click="btn_Clicked" Tag="5"/>
     </Grid>

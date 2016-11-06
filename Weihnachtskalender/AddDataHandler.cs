@@ -11,7 +11,7 @@ namespace Weihnachtskalender
     public class AddDataHandler
     {
 
-        public List<Tuple<string, bool>> datesList = new List<Tuple<string, bool>>();          
+        public List<Tuple<string, float>> datesList = new List<Tuple<string, float>>();          
         private string _addDataFolderPath;
         private string _addDataPictureFolderPath;
         private string _addDataDateConfigXMLPath;
@@ -38,8 +38,8 @@ namespace Weihnachtskalender
                 foreach (XmlNode node in doc.DocumentElement)
                 {
                     string id = node.Attributes[0].Value;
-                    bool locked = Convert.ToBoolean(node.Attributes[1].Value);
-                    datesList.Add(new Tuple<string, bool> (id, locked));                 
+                    float opacity = Convert.ToSingle(node.Attributes[1].Value);
+                    datesList.Add(new Tuple<string, float> (id, opacity));                 
                 }
 
             }
@@ -58,12 +58,12 @@ namespace Weihnachtskalender
                 XmlDocument doc = new XmlDocument();
                 doc.Load(_addDataDateConfigXMLPath);
 
-                foreach (Tuple<string, bool> tuple in datesList)
+                foreach (Tuple<string, float> tuple in datesList)
                 {
                     string id = tuple.Item1;
                     string nodePath = "/dates/date[@id='" + id + "']";
                     XmlNode node = doc.SelectSingleNode(nodePath);
-                    node.Attributes["locked"].Value = tuple.Item2.ToString();
+                    node.Attributes["opacity"].Value = tuple.Item2.ToString();
                 }
                 doc.Save(_addDataDateConfigXMLPath);
             }

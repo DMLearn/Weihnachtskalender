@@ -10,8 +10,8 @@ namespace Weihnachtskalender
     class Controller
 
     {
-        AddDataHandler addDataHandler = new AddDataHandler();
-        
+
+        public AddDataHandler addDataHandler = new AddDataHandler();
         private int _currentDate;
 
 
@@ -52,6 +52,6 @@ namespace Weihnachtskalender
             }
 
         }
-        
+
     }
 }

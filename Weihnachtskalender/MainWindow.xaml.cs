@@ -21,11 +21,13 @@ namespace Weihnachtskalender
     public partial class MainWindow : Window
     {
         Controller controller = new Controller();
+        AddDataHandler addDataHandler = new AddDataHandler();
 
         //Konstruktor
         public MainWindow()
         {
-            InitializeComponent();     
+            InitializeComponent();
+            this.DataContext = this.addDataHandler;
         }
 
         //Button pressed

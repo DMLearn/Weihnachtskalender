@@ -5,17 +5,22 @@ using System.Xml;
 using System.IO;
 using System.Security.AccessControl;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Weihnachtskalender
 {
-    public class AddDataHandler
+    public class AddDataHandler : INotifyPropertyChanged
+
     {
 
         public List<Tuple<string, string>> datesList = new List<Tuple<string, string>>();          
         private string _addDataFolderPath;
         private string _addDataPictureFolderPath;
         private string _addDataDateConfigXMLPath;
-        private string _adminUserName; 
+        private string _adminUserName;
+        public string subWindowText { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
 
         //Konstrutur
@@ -25,6 +30,7 @@ namespace Weihnachtskalender
             _addDataPictureFolderPath = _addDataFolderPath + "\\Picture";
             _addDataDateConfigXMLPath = _addDataFolderPath + "\\DateConfig.xml";
             _adminUserName = Environment.UserName;
+            subWindowText = "SubWindow Binding";
         }
 
         public void readXML()

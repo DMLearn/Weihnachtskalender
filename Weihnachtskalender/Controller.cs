@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 namespace Weihnachtskalender
 {
     class Controller
+
     {
         AddDataHandler addDataHandler = new AddDataHandler();
-
+        
         private int _currentDate;
 
 
@@ -51,6 +52,6 @@ namespace Weihnachtskalender
             }
 
         }
-
+        
     }
 }

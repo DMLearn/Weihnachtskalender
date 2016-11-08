@@ -4,7 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Weihnachtskalender"
-        DataContext="{Binding RelativeSource={RelativeSource Self}}"
         mc:Ignorable="d"
         Title="Projekt-X" Height="447" Width="500">
     <Window.Resources>
@@ -20,10 +19,12 @@
     </Window.Resources>
     <Grid>
         <Button x:Name="day1" Content="1" Style="{StaticResource BtnStyle}" Margin="195,280,257,96" Click="btn_Clicked" Tag="1"/>
-        <Button x:Name="day2" Content="6" Style="{StaticResource BtnStyle}" Margin="300,196,152,180" Click="btn_Clicked" Tag="6"/>
+        <Button x:Name="day2" Content="6" Style="{StaticResource BtnStyle}" Margin="350,230,112,156" Click="btn_Clicked" Tag="6"/>
         <Button x:Name="day3" Content="10" Style="{StaticResource BtnStyle}" Margin="345,66,107,310" Click="btn_Clicked" Tag="10"/>
         <Button x:Name="day4" Content="4" Style="{StaticResource BtnStyle}" Margin="100,145,352,231" Click="btn_Clicked" Tag="4"/>
         <Button x:Name="day5" Content="5" Style="{StaticResource BtnStyle}" Margin="215,37,237,339" Click="btn_Clicked" Tag="5"/>
+        <TextBox x:Name="textBoxMain" HorizontalAlignment="Left" Height="30" Margin="180,125,0,0" TextWrapping="Wrap" Text="{Binding mainWindowText}" VerticalAlignment="Top" Width="125"/>
+        <TextBox x:Name="textBoxSub" HorizontalAlignment="Left" Height="30" Margin="180,175,0,0" TextWrapping="Wrap" Text="{Binding subWindowText}" VerticalAlignment="Top" Width="125"/>
     </Grid>
-    
+
 </Window>

@@ -12,7 +12,7 @@ namespace Weihnachtskalender
     public class AddDataHandler : INotifyPropertyChanged
 
     {
-
+        //TODO datesList in Property umwandlen, damit das Binding funktioniert.
         public List<Tuple<string, string>> datesList = new List<Tuple<string, string>>();          
         private string _addDataFolderPath;
         private string _addDataPictureFolderPath;

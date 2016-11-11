@@ -26,7 +26,8 @@ namespace Weihnachtskalender
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = this.controller.addDataHandler; //Binding to UIElement
+            //this.DataContext = this.controller.addDataHandler; //Binding to UIElement
+            //(this.Content as FrameworkElement).DataContext = this;
         }
 
         //Button pressed

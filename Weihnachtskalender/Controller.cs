@@ -12,8 +12,13 @@ namespace Weihnachtskalender
     {
 
         public AddDataHandler addDataHandler = new AddDataHandler();
-        private int _currentDate;
 
+        private int _currentDate;
+        public int currentDate
+        {
+            get { return _currentDate; }
+            set { _currentDate = value; }
+        }
 
         //Konstruktor
         public Controller()

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Weihnachtskalender"
         mc:Ignorable="d"
-        Title="Projekt-X" Height="447" Width="500">
+        Title="Projekt-X" Height="600" Width="600">
     <Window.Resources>
         <Style x:Key="BtnStyle" TargetType="Button">
             <Setter Property="FontSize" Value="20"/>
@@ -17,14 +17,14 @@
             <Setter Property="Background" Value="Bisque"/>
         </Style>
     </Window.Resources>
-    <Grid>
-        <Button x:Name="day1" Content="1" Style="{StaticResource BtnStyle}" Margin="195,280,257,96" Click="btn_Clicked" Tag="1"/>
-        <Button x:Name="day2" Content="6" Style="{StaticResource BtnStyle}" Margin="350,230,112,156" Click="btn_Clicked" Tag="6"/>
-        <Button x:Name="day3" Content="10" Style="{StaticResource BtnStyle}" Margin="345,66,107,310" Click="btn_Clicked" Tag="10"/>
-        <Button x:Name="day4" Content="4" Style="{StaticResource BtnStyle}" Margin="100,145,352,231" Click="btn_Clicked" Tag="4"/>
-        <Button x:Name="day5" Content="5" Style="{StaticResource BtnStyle}" Margin="215,37,237,339" Click="btn_Clicked" Tag="5"/>
-        <TextBox x:Name="textBoxMain" HorizontalAlignment="Left" Height="30" Margin="180,125,0,0" TextWrapping="Wrap" Text="{Binding subWindowText}" VerticalAlignment="Top" Width="125"/>
-        <TextBox x:Name="textBoxSub" HorizontalAlignment="Left" Height="30" Margin="180,175,0,0" TextWrapping="Wrap" Text="{Binding subWindowText}" VerticalAlignment="Top" Width="125"/>
-    </Grid>
+    <Canvas DataContext="{StaticResource AddDataHandler}">
+        <Button x:Name="day1" Content="1" Style="{StaticResource BtnStyle}" Margin="120,170,442,369" Click="btn_Clicked" Tag="1"/>
+        <Button x:Name="day2" Content="6" Style="{StaticResource BtnStyle}" Margin="195,111,367,428" Click="btn_Clicked" Tag="6"/>
+        <Button x:Name="day3" Content="10" Style="{StaticResource BtnStyle}" Margin="195,60,367,479" Click="btn_Clicked" Tag="10"/>
+        <Button x:Name="day4" Content="4" Style="{StaticResource BtnStyle}" Margin="120,110,442,429" Click="btn_Clicked" Tag="4"/>
+        <Button x:Name="day5" Content="5" Style="{StaticResource BtnStyle}" Margin="120,60,442,479" Click="btn_Clicked" Tag="5"/>
+        <TextBlock x:Name="txtBoxDate" HorizontalAlignment="Left" Height="85" TextWrapping="Wrap" Text="19" VerticalAlignment="Top" Width="95" Canvas.Left="475" Canvas.Top="35" RenderTransformOrigin="0.52,1.333" FontSize="70" Foreground="#FFE23B3B" FontWeight="Bold"/>
+        <TextBlock x:Name="txtBoxInfo" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Heute ist der" VerticalAlignment="Top" Width="195" Canvas.Left="387" Canvas.Top="10" RenderTransformOrigin="0.52,1.333" FontSize="30"/>
+    </Canvas>
 
 </Window>

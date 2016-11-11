@@ -30,7 +30,7 @@ namespace Weihnachtskalender
             _addDataPictureFolderPath = _addDataFolderPath + "\\Picture";
             _addDataDateConfigXMLPath = _addDataFolderPath + "\\DateConfig.xml";
             _adminUserName = Environment.UserName;
-            subWindowText = "SubWindow Binding";
+            subWindowText = "Jepp";
         }
 
         public void readXML()

@@ -19,14 +19,12 @@ namespace Weihnachtskalender
             get { return _currentDate; }
             set { _currentDate = value; }
         }
-        public string subWindowText { get; set; }
 
         //Konstruktor
         public Controller()
         {
             getSystemDate();
             addDataHandler.readXML();
-            subWindowText = "Jepp";
         }
 
         public void start(int btn)

@@ -5,26 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Weihnachtskalender"
         mc:Ignorable="d"
-        Title="Projekt-X" Height="600" Width="600">
+        Title="Projekt-X" Height="1200" Width="1000">
     <Window.Resources>
         <Style x:Key="BtnStyle" TargetType="Button">
-            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontSize" Value="40"/>
             <Setter Property="FontFamily" Value="Segoe"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Foreground" Value="Blue"/>
-            <Setter Property="Width" Value="30"/>
-            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="60"/>
+            <Setter Property="Height" Value="60"/>
             <Setter Property="Background" Value="Bisque"/>
         </Style>
     </Window.Resources>
     <Canvas DataContext="{StaticResource AddDataHandler}">
-        <Button x:Name="day1" Content="1" Style="{StaticResource BtnStyle}" Margin="120,170,442,369" Click="btn_Clicked" Tag="1"/>
-        <Button x:Name="day2" Content="6" Style="{StaticResource BtnStyle}" Margin="195,111,367,428" Click="btn_Clicked" Tag="6"/>
-        <Button x:Name="day3" Content="10" Style="{StaticResource BtnStyle}" Margin="195,60,367,479" Click="btn_Clicked" Tag="10"/>
-        <Button x:Name="day4" Content="4" Style="{StaticResource BtnStyle}" Margin="120,110,442,429" Click="btn_Clicked" Tag="4"/>
-        <Button x:Name="day5" Content="5" Style="{StaticResource BtnStyle}" Margin="120,60,442,479" Click="btn_Clicked" Tag="5"/>
-        <TextBlock x:Name="txtBoxDate" HorizontalAlignment="Left" Height="85" TextWrapping="Wrap" Text="19" VerticalAlignment="Top" Width="95" Canvas.Left="475" Canvas.Top="35" RenderTransformOrigin="0.52,1.333" FontSize="70" Foreground="#FFE23B3B" FontWeight="Bold"/>
-        <TextBlock x:Name="txtBoxInfo" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Heute ist der" VerticalAlignment="Top" Width="195" Canvas.Left="387" Canvas.Top="10" RenderTransformOrigin="0.52,1.333" FontSize="30"/>
+        <Button x:Name="day1" Content="1" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="1" Canvas.Left="415" Canvas.Top="237"/>
+        <Button x:Name="day2" Content="2" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="2" Canvas.Left="485" Canvas.Top="400"/>
+        <Button x:Name="day3" Content="3" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="3" Canvas.Left="335" Canvas.Top="85"/>
+        <Button x:Name="day4" Content="4" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="4" Canvas.Left="335" Canvas.Top="237"/>
+        <Button x:Name="day5" Content="5" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="5" Canvas.Left="420" Canvas.Top="172"/>
+        <Button x:Name="day6" Content="6" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="6" Canvas.Left="485" Canvas.Top="237"/>
+        <Button x:Name="day7" Content="7" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="7" Canvas.Left="640" Canvas.Top="237"/>
+        <Button x:Name="day8" Content="8" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="8" Canvas.Left="660" Canvas.Top="400"/>
+        <Button x:Name="day9" Content="9" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="9" Canvas.Left="415" Canvas.Top="315"/>
+        <Button x:Name="day10" Content="10" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="10" Canvas.Left="640" Canvas.Top="315"/>
+        <Button x:Name="day11" Content="11" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="11" Canvas.Left="335" Canvas.Top="315"/>
+        <Button x:Name="day12" Content="12" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="12" Canvas.Left="335" Canvas.Top="172"/>
+        <Button x:Name="day13" Content="13" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="13" Canvas.Left="570" Canvas.Top="172" RenderTransformOrigin="-0.5,0.033"/>
+        <Button x:Name="day14" Content="14" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="14" Canvas.Left="420" Canvas.Top="400"/>
+        <Button x:Name="day15" Content="15" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="15" Canvas.Left="485" Canvas.Top="172"/>
+        <Button x:Name="day16" Content="16" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="16" Canvas.Left="485" Canvas.Top="315"/>
+        <Button x:Name="day17" Content="17" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="17" Canvas.Left="570" Canvas.Top="237"/>
+        <Button x:Name="day18" Content="18" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="18" Canvas.Left="570" Canvas.Top="315"/>
+        <Button x:Name="day19" Content="19" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="19" Canvas.Left="570" Canvas.Top="400"/>
+        <Button x:Name="day20" Content="20" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="20" Canvas.Left="640" Canvas.Top="172"/>
+        <Button x:Name="day21" Content="21" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="21" Canvas.Top="400" RenderTransformOrigin="5.167,2.7" Canvas.Left="335"/>
+        <TextBlock x:Name="txtBoxDate" DataContext="{StaticResource Controller}" HorizontalAlignment="Left" Height="85" TextWrapping="Wrap" Text="{Binding currentDate}" VerticalAlignment="Top" Width="95" Canvas.Left="865" Canvas.Top="60" RenderTransformOrigin="0.52,1.333" FontSize="70" Foreground="#FFE23B3B" FontWeight="Bold"/>
+        <TextBlock x:Name="txtBoxInfo" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Heute ist der" VerticalAlignment="Top" Width="195" Canvas.Left="765" Canvas.Top="25" RenderTransformOrigin="0.52,1.333" FontSize="30"/>
+        <Button x:Name="day22" Content="22" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="22" Canvas.Left="420" Canvas.Top="85"/>
+        <Button x:Name="day23" Content="23" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="23" Canvas.Left="500" Canvas.Top="85"/>
+        <Button x:Name="day24" Content="24" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="24" Canvas.Left="570" Canvas.Top="85"/>
     </Canvas>
 
 </Window>

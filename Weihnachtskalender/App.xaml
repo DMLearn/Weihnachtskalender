@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:Weihnachtskalender"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <local:AddDataHandler x:Key="AddDataHandler"/>
         <local:Controller x:Key="Controller"/>
+        <local:AddDataHandler x:Key="AddDataHandler"/>
     </Application.Resources>
 </Application>

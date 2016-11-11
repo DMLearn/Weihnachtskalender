@@ -18,7 +18,6 @@ namespace Weihnachtskalender
         private string _addDataPictureFolderPath;
         private string _addDataDateConfigXMLPath;
         private string _adminUserName;
-        public string subWindowText { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -30,7 +29,6 @@ namespace Weihnachtskalender
             _addDataPictureFolderPath = _addDataFolderPath + "\\Picture";
             _addDataDateConfigXMLPath = _addDataFolderPath + "\\DateConfig.xml";
             _adminUserName = Environment.UserName;
-            subWindowText = "Jepp";
         }
 
         public void readXML()

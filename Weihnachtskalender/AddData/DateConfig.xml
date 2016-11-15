@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <dates>  
   <date id="1.12" opacity="1.0"/> 
-  <date id="2.12" opacity="1.0"/> 
+  <date id="2.12" opacity="0.3"/> 
   <date id="3.12" opacity="1.0"/>
   <date id="4.12" opacity="1.0"/>
   <date id="5.12" opacity="1.0"/>
@@ -12,7 +12,7 @@
   <date id="10.12" opacity="1.0"/>
   <date id="11.12" opacity="1.0"/>
   <date id="12.12" opacity="1.0"/>
-  <date id="13.12" opacity="1.0"/>
+  <date id="13.12" opacity="0.5"/>
   <date id="14.12" opacity="1.0"/>
   <date id="15.12" opacity="1.0"/>
   <date id="16.12" opacity="1.0"/>
@@ -23,5 +23,5 @@
   <date id="21.12" opacity="1.0"/>
   <date id="22.12" opacity="1.0"/>
   <date id="23.12" opacity="1.0"/>
-  <date id="24.12" opacity="1.0"/>
+  <date id="24.12" opacity="0.2"/>
 </dates>

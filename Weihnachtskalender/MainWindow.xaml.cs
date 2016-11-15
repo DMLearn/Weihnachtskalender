@@ -26,6 +26,10 @@ namespace Weihnachtskalender
         public MainWindow()
         {
             InitializeComponent();
+
+            //Creates Bindings between code behind and xaml
+            buttonCanvas.DataContext = controller.addDataHandler.datesList;
+            currentDateCanvas.Text = "Hallo mein Schatz. Heute ist der " + controller.currentDate.ToString() + ".";
         }
 
         //Button pressed

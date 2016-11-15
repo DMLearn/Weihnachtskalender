@@ -6,6 +6,7 @@ using System.IO;
 using System.Security.AccessControl;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace Weihnachtskalender
 {
@@ -13,14 +14,42 @@ namespace Weihnachtskalender
 
     {
         //TODO datesList in Property umwandlen, damit das Binding funktioniert.
-        public List<Tuple<string, string>> datesList = new List<Tuple<string, string>>();          
+        //public ObservableCollection<Tuple<string, string>> datesList = new ObservableCollection<Tuple<string, string>>();
+
+        private ObservableCollection<Tuple<string, string>> _datesList = new ObservableCollection<Tuple<string, string>>();
+        public ObservableCollection<Tuple<string, string>> datesList
+        {
+            get { return _datesList ; }
+            set
+            {
+                _datesList = value;
+                RaisePropertyChanged("datesList");
+            }
+        }
+
+        private string _testString = "Hallo David"; 
+        public string testString
+        {
+            get
+            { return _testString; }
+            set
+            { _testString = value; }
+        }
+
+        //Implementation of INotifyPropertyChanged
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void RaisePropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+
         private string _addDataFolderPath;
         private string _addDataPictureFolderPath;
         private string _addDataDateConfigXMLPath;
         private string _adminUserName;
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
+   
 
         //Konstrutur
         public AddDataHandler()
@@ -29,6 +58,7 @@ namespace Weihnachtskalender
             _addDataPictureFolderPath = _addDataFolderPath + "\\Picture";
             _addDataDateConfigXMLPath = _addDataFolderPath + "\\DateConfig.xml";
             _adminUserName = Environment.UserName;
+           
         }
 
         public void readXML()
@@ -43,7 +73,7 @@ namespace Weihnachtskalender
                 {
                     string id = node.Attributes[0].Value;
                     string opacity = node.Attributes[1].Value;
-                    datesList.Add(new Tuple<string, string> (id, opacity));                 
+                    _datesList.Add(new Tuple<string, string> (id, opacity));                 
                 }
 
             }
@@ -62,7 +92,7 @@ namespace Weihnachtskalender
                 XmlDocument doc = new XmlDocument();
                 doc.Load(_addDataDateConfigXMLPath);
 
-                foreach (Tuple<string, string> tuple in datesList)
+                foreach (Tuple<string, string> tuple in _datesList)
                 {
                     string id = tuple.Item1;
                     string nodePath = "/dates/date[@id='" + id + "']";

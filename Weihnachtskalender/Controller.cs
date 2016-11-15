@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace Weihnachtskalender
 {
-    class Controller
+    class Controller 
 
     {
 
@@ -31,7 +32,7 @@ namespace Weihnachtskalender
         {
             if (checkDateValidity(btn) == true)
             {
-                //Do something
+                
             }
             else
             {

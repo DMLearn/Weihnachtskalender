@@ -32,7 +32,7 @@ namespace Weihnachtskalender
         {
             if (checkDateValidity(btn) == true)
             {
-                
+                addDataHandler.updateDatesList(btn);
             }
             else
             {

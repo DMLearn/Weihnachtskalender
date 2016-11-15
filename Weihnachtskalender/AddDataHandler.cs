@@ -27,14 +27,7 @@ namespace Weihnachtskalender
             }
         }
 
-        private string _testString = "Hallo David"; 
-        public string testString
-        {
-            get
-            { return _testString; }
-            set
-            { _testString = value; }
-        }
+        public string _lowOpacity = "0.2"; 
 
         //Implementation of INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
@@ -49,7 +42,6 @@ namespace Weihnachtskalender
         private string _addDataPictureFolderPath;
         private string _addDataDateConfigXMLPath;
         private string _adminUserName;
-   
 
         //Konstrutur
         public AddDataHandler()
@@ -59,6 +51,14 @@ namespace Weihnachtskalender
             _addDataDateConfigXMLPath = _addDataFolderPath + "\\DateConfig.xml";
             _adminUserName = Environment.UserName;
            
+        }
+
+        public void updateDatesList(int btn)
+        {
+            //_datesList[btn-1].Item2.Replace("1.0", "0.2");
+            var updatedOpacity = Tuple.Create(Convert.ToString(btn), _lowOpacity);
+            _datesList.Insert(btn - 1, updatedOpacity);
+            _datesList.RemoveAt(btn);    
         }
 
         public void readXML()

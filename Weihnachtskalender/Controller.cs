@@ -30,6 +30,7 @@ namespace Weihnachtskalender
 
         public void start(int btn)
         {
+            #region Check if select date ist valid and then process data
             if (checkDateValidity(btn) == true)
             {
                 addDataHandler.updateDatesList(btn);
@@ -38,6 +39,9 @@ namespace Weihnachtskalender
             {
                 MessageBox.Show("You did select the wrong day.", "Oh oh...");
             }
+            #endregion
+
+            addDataHandler.writeXML();
             
         }
 

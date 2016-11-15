@@ -13,8 +13,6 @@ namespace Weihnachtskalender
     public class AddDataHandler : INotifyPropertyChanged
 
     {
-        //TODO datesList in Property umwandlen, damit das Binding funktioniert.
-        //public ObservableCollection<Tuple<string, string>> datesList = new ObservableCollection<Tuple<string, string>>();
 
         private ObservableCollection<Tuple<string, string>> _datesList = new ObservableCollection<Tuple<string, string>>();
         public ObservableCollection<Tuple<string, string>> datesList
@@ -55,7 +53,6 @@ namespace Weihnachtskalender
 
         public void updateDatesList(int btn)
         {
-            //_datesList[btn-1].Item2.Replace("1.0", "0.2");
             var updatedOpacity = Tuple.Create(Convert.ToString(btn), _lowOpacity);
             _datesList.Insert(btn - 1, updatedOpacity);
             _datesList.RemoveAt(btn);    

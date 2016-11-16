@@ -5,16 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Weihnachtskalender"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="Projekt-X" Height="1097" Width="1035">
     <Window.Resources>
-        <Style x:Key="BtnStyle" TargetType="Button">
+        <Style TargetType="Button" x:Key="FlatButtonStyle">
             <Setter Property="FontSize" Value="40"/>
             <Setter Property="FontFamily" Value="Segoe"/>
             <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="Bisque"/>
             <Setter Property="Foreground" Value="Blue"/>
             <Setter Property="Width" Value="60"/>
             <Setter Property="Height" Value="60"/>
-            <Setter Property="Background" Value="Bisque"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderThickness="0"
+                                Background= "Bisque"
+                                CornerRadius="6">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Window.Resources>
     <Grid>
@@ -27,30 +39,30 @@
         </Canvas>
         <Canvas x:Name="buttonCanvas" Grid.Row="1" Margin="0,0,0,104">
             <Image x:Name="backroundImage" Height="1005" Width="1027"/>
-            <Button x:Name="day1" Content="1" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="1" Canvas.Left="415" Canvas.Top="237" Opacity="{Binding [0].Item2}"/>
-            <Button x:Name="day2" Content="2" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="2" Canvas.Left="485" Canvas.Top="400" Opacity="{Binding [1].Item2}"/>
-            <Button x:Name="day3" Content="3" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="3" Canvas.Left="335" Canvas.Top="85" Opacity="{Binding [2].Item2}"/>
-            <Button x:Name="day4" Content="4" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="4" Canvas.Left="335" Canvas.Top="237" Opacity="{Binding [3].Item2}"/>
-            <Button x:Name="day5" Content="5" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="5" Canvas.Left="420" Canvas.Top="172" Opacity="{Binding [4].Item2}"/>
-            <Button x:Name="day6" Content="6" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="6" Canvas.Left="485" Canvas.Top="237" Opacity="{Binding [5].Item2}"/>
-            <Button x:Name="day7" Content="7" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="7" Canvas.Left="640" Canvas.Top="237" Opacity="{Binding [6].Item2}"/>
-            <Button x:Name="day8" Content="8" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="8" Canvas.Left="660" Canvas.Top="400" Opacity="{Binding [7].Item2}"/>
-            <Button x:Name="day9" Content="9" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="9" Canvas.Left="415" Canvas.Top="315" Opacity="{Binding [8].Item2}"/>
-            <Button x:Name="day10" Content="10" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="10" Canvas.Left="640" Canvas.Top="315" Opacity="{Binding [9].Item2}"/>
-            <Button x:Name="day11" Content="11" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="11" Canvas.Left="335" Canvas.Top="315" Opacity="{Binding [10].Item2}"/>
-            <Button x:Name="day12" Content="12" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="12" Canvas.Left="335" Canvas.Top="172" Opacity="{Binding [11].Item2}"/>
-            <Button x:Name="day13" Content="13" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="13" Canvas.Left="570" Canvas.Top="172" Opacity="{Binding [12].Item2}"/>
-            <Button x:Name="day14" Content="14" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="14" Canvas.Left="420" Canvas.Top="400" Opacity="{Binding [13].Item2}"/>
-            <Button x:Name="day15" Content="15" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="15" Canvas.Left="485" Canvas.Top="172" Opacity="{Binding [14].Item2}"/>
-            <Button x:Name="day16" Content="16" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="16" Canvas.Left="485" Canvas.Top="315" Opacity="{Binding [15].Item2}"/>
-            <Button x:Name="day17" Content="17" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="17" Canvas.Left="570" Canvas.Top="237" Opacity="{Binding [16].Item2}"/>
-            <Button x:Name="day18" Content="18" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="18" Canvas.Left="570" Canvas.Top="315" Opacity="{Binding [17].Item2}"/>
-            <Button x:Name="day19" Content="19" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="19" Canvas.Left="570" Canvas.Top="400" Opacity="{Binding [18].Item2}"/>
-            <Button x:Name="day20" Content="20" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="20" Canvas.Left="640" Canvas.Top="172" Opacity="{Binding [19].Item2}"/>
-            <Button x:Name="day21" Content="21" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="21" Canvas.Top="400" Canvas.Left="335" Opacity="{Binding [20].Item2}"/>
-            <Button x:Name="day22" Content="22" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="22" Canvas.Left="420" Canvas.Top="85"  Opacity="{Binding [21].Item2}"/>
-            <Button x:Name="day23" Content="23" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="23" Canvas.Left="500" Canvas.Top="85"  Opacity="{Binding [22].Item2}"/>
-            <Button x:Name="day24" Content="24" Style="{StaticResource BtnStyle}" Click="btn_Clicked" Tag="24" Canvas.Left="570" Canvas.Top="85"  Opacity="{Binding [23].Item2}"/>
+            <Button x:Name="day1" Content="1" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="1" Canvas.Left="200" Canvas.Top="437" Opacity="{Binding [0].Item2}" Background="#FFC16213"/>
+            <Button x:Name="day2" Content="2" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="2" Canvas.Left="485" Canvas.Top="400" Opacity="{Binding [1].Item2}"/>
+            <Button x:Name="day3" Content="3" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="3" Canvas.Left="335" Canvas.Top="85" Opacity="{Binding [2].Item2}"/>
+            <Button x:Name="day4" Content="4" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="4" Canvas.Left="335" Canvas.Top="237" Opacity="{Binding [3].Item2}"/>
+            <Button x:Name="day5" Content="5" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="5" Canvas.Left="420" Canvas.Top="172" Opacity="{Binding [4].Item2}"/>
+            <Button x:Name="day6" Content="6" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="6" Canvas.Left="485" Canvas.Top="237" Opacity="{Binding [5].Item2}"/>
+            <Button x:Name="day7" Content="7" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="7" Canvas.Left="640" Canvas.Top="237" Opacity="{Binding [6].Item2}"/>
+            <Button x:Name="day8" Content="8" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="8" Canvas.Left="660" Canvas.Top="400" Opacity="{Binding [7].Item2}"/>
+            <Button x:Name="day9" Content="9" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="9" Canvas.Left="415" Canvas.Top="315" Opacity="{Binding [8].Item2}"/>
+            <Button x:Name="day10" Content="10" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="10" Canvas.Left="640" Canvas.Top="315" Opacity="{Binding [9].Item2}"/>
+            <Button x:Name="day11" Content="11" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="11" Canvas.Left="335" Canvas.Top="315" Opacity="{Binding [10].Item2}"/>
+            <Button x:Name="day12" Content="12" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="12" Canvas.Left="335" Canvas.Top="172" Opacity="{Binding [11].Item2}"/>
+            <Button x:Name="day13" Content="13" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="13" Canvas.Left="570" Canvas.Top="172" Opacity="{Binding [12].Item2}"/>
+            <Button x:Name="day14" Content="14" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="14" Canvas.Left="420" Canvas.Top="400" Opacity="{Binding [13].Item2}"/>
+            <Button x:Name="day15" Content="15" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="15" Canvas.Left="485" Canvas.Top="172" Opacity="{Binding [14].Item2}"/>
+            <Button x:Name="day16" Content="16" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="16" Canvas.Left="485" Canvas.Top="315" Opacity="{Binding [15].Item2}"/>
+            <Button x:Name="day17" Content="17" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="17" Canvas.Left="570" Canvas.Top="237" Opacity="{Binding [16].Item2}"/>
+            <Button x:Name="day18" Content="18" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="18" Canvas.Left="570" Canvas.Top="315" Opacity="{Binding [17].Item2}"/>
+            <Button x:Name="day19" Content="19" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="19" Canvas.Left="570" Canvas.Top="400" Opacity="{Binding [18].Item2}"/>
+            <Button x:Name="day20" Content="20" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="20" Canvas.Left="640" Canvas.Top="172" Opacity="{Binding [19].Item2}"/>
+            <Button x:Name="day21" Content="21" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="21" Canvas.Top="400" Canvas.Left="335" Opacity="{Binding [20].Item2}"/>
+            <Button x:Name="day22" Content="22" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="22" Canvas.Left="420" Canvas.Top="85"  Opacity="{Binding [21].Item2}"/>
+            <Button x:Name="day23" Content="23" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="23" Canvas.Left="500" Canvas.Top="85"  Opacity="{Binding [22].Item2}"/>
+            <Button x:Name="day24" Content="24" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="24" Canvas.Left="570" Canvas.Top="85"  Opacity="{Binding [23].Item2}"/>
         </Canvas>
     </Grid>
 

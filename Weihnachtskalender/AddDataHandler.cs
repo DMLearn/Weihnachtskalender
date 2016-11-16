@@ -25,7 +25,7 @@ namespace Weihnachtskalender
             }
         }
 
-        public string _lowOpacity = "0.2"; 
+        public string _lowOpacity = "0.35"; 
 
         //Implementation of INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;

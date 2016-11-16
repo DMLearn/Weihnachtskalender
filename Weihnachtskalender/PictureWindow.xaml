@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="PictureWindow" Height="300" Width="300">
     <Grid>
-        <Image x:Name="pictureWindow"/>
+        <Image x:Name="dateImage"/>
     </Grid>
 </Window>

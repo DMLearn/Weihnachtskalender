@@ -38,7 +38,7 @@
             <TextBlock x:Name="currentDateCanvas" FontSize="40" Height="61" Width="1030" Background="#FF9063C7" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-1"/>
         </Canvas>
         <Canvas x:Name="buttonCanvas" Grid.Row="1" Margin="0,0,0,104">
-            <Image x:Name="backroundImage" Height="1005" Width="1027" Source="D:\David\Code_Snippets\Weihnachtskalender\Weihnachtskalender\bin\Debug\AddData\Picture\Background.bmp"/>
+            <Image x:Name="backroundImage" Height="1005" Width="1027"/>
             <Button x:Name="day1" Content="1" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="1" Canvas.Left="200" Canvas.Top="437" Opacity="{Binding [0].Item2}" Background="#FFC16213"/>
             <Button x:Name="day2" Content="2" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="2" Canvas.Left="485" Canvas.Top="400" Opacity="{Binding [1].Item2}"/>
             <Button x:Name="day3" Content="3" Style="{StaticResource FlatButtonStyle}" Click="btn_Clicked" Tag="3" Canvas.Left="130" Canvas.Top="23" Opacity="{Binding [2].Item2}"/>

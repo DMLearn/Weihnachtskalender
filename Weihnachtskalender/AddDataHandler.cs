@@ -35,11 +35,11 @@ namespace Weihnachtskalender
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
 
-
-        private string _addDataFolderPath;
         private string _addDataPictureFolderPath;
+        private string _addDataFolderPath;
         private string _addDataDateConfigXMLPath;
         private string _adminUserName;
+        public string addDataBackroundPicture;
 
         //Konstrutur
         public AddDataHandler()
@@ -47,6 +47,7 @@ namespace Weihnachtskalender
             _addDataFolderPath = Directory.GetCurrentDirectory() + "\\AddData";
             _addDataPictureFolderPath = _addDataFolderPath + "\\Picture";
             _addDataDateConfigXMLPath = _addDataFolderPath + "\\DateConfig.xml";
+            addDataBackroundPicture = _addDataPictureFolderPath + "\\Background.bmp";
             _adminUserName = Environment.UserName;
            
         }

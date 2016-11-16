@@ -10,30 +10,16 @@ using System.Collections.ObjectModel;
 
 namespace Weihnachtskalender
 {
-    public class AddDataHandler : INotifyPropertyChanged
-
+    public class AddDataHandler
     {
-
         private ObservableCollection<Tuple<string, string>> _datesList = new ObservableCollection<Tuple<string, string>>();
         public ObservableCollection<Tuple<string, string>> datesList
         {
             get { return _datesList ; }
-            set
-            {
-                _datesList = value;
-                RaisePropertyChanged("datesList");
-            }
+            set { _datesList = value; }
         }
 
         public string _lowOpacity = "0.35"; 
-
-        //Implementation of INotifyPropertyChanged
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void RaisePropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
 
         private string _addDataPictureFolderPath;
         private string _addDataFolderPath;

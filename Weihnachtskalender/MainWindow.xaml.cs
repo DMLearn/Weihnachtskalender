@@ -29,7 +29,7 @@ namespace Weihnachtskalender
 
             //Creates Bindings between code behind and xaml
             buttonCanvas.DataContext = controller.addDataHandler.datesList;
-            currentDateCanvas.Text = "                   Hallo mein Schatz. Heute ist der " + controller.currentDate.ToString() + ".";
+            currentDateCanvas.Text = "        Hallo mein Schatz, heute ist der " + controller.currentDate.ToString() + ". Dezember.";
             //backroundImage.Source = new BitmapImage(new Uri(controller.addDataHandler.addDataBackroundPicture, UriKind.Absolute));
 
         }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Weihnachtskalender"
         mc:Ignorable="d"
-        ResizeMode="NoResize"
+        ResizeMode="CanMinimize"
         Title="Weihnachtskalender 2016 für meine Elinor." Height="1097" Width="1035">
     <Window.Resources>
         <Style TargetType="Button" x:Key="FlatButtonStyle">

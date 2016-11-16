@@ -37,7 +37,7 @@ namespace Weihnachtskalender
             }
             else
             {
-                MessageBox.Show("You did select the wrong day.", "Oh oh...");
+                MessageBox.Show("Da ist aber jemand neugierig :-)\nDas ausgewählte Datum darf nicht in der Zukunft liegen!", "Oh oh...", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             #endregion
 

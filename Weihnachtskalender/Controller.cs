@@ -34,15 +34,14 @@ namespace Weihnachtskalender
             if (checkDateValidity(btn) == true)
             {
                 addDataHandler.updateDatesList(btn);
+                addDataHandler.writeXML();
             }
             else
             {
                 MessageBox.Show("Da ist aber jemand neugierig :-)\nDas ausgewählte Datum darf nicht in der Zukunft liegen!", "Oh oh...", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             #endregion
-
-            addDataHandler.writeXML();
-            
+ 
         }
 
         private void getSystemDate()

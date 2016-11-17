@@ -69,15 +69,24 @@ namespace Weihnachtskalender
 
         private void displayPicture(int btn)
         {
-            PictureWindow newWindow = new PictureWindow();
-            Binding b = new Binding();
-            b.Mode = BindingMode.OneWay;
+            try
+            {
+                string imagePath = addDataHandler.addDataPictureFolderPath + "\\" + btn + ".jpg";
 
-            string imagePath = addDataHandler.addDataPictureFolderPath + "\\" + btn + ".jpg";
-            b.Source = new BitmapImage(new Uri(imagePath, UriKind.Absolute));
-            newWindow.dateImage.SetBinding(Image.SourceProperty, b);
-            newWindow.Show();
+                PictureWindow newWindow = new PictureWindow();
+                Binding b = new Binding();
+                b.Mode = BindingMode.OneWay;
+                b.Source = new BitmapImage(new Uri(imagePath, UriKind.Absolute)); 
+                     
+                newWindow.dateImage.SetBinding(Image.SourceProperty, b);
+                newWindow.Show();
+
+            }
+            catch (Exception)
+            {
+
+            }
+
         }
-
     }
 }

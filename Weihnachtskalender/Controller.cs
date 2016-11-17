@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using System.Windows.Data;
+using System.Windows.Media.Imaging;
+using System.Windows.Controls;
 
 namespace Weihnachtskalender
 {
@@ -35,6 +38,7 @@ namespace Weihnachtskalender
             {
                 addDataHandler.updateDatesList(btn);
                 addDataHandler.writeXML();
+                displayPicture(btn);
             }
             else
             {
@@ -60,6 +64,18 @@ namespace Weihnachtskalender
                 return false;
             }
 
+        }
+
+        private void displayPicture(int btn)
+        {
+            PictureWindow newWindow = new PictureWindow();
+            Binding b = new Binding();
+            b.Mode = BindingMode.OneWay;
+
+            string imagePath = addDataHandler.addDataPictureFolderPath + "\\" + btn + ".jpg";
+            b.Source = new BitmapImage(new Uri(imagePath, UriKind.Absolute));
+            newWindow.dateImage.SetBinding(Image.SourceProperty, b);
+            newWindow.Show();
         }
 
     }

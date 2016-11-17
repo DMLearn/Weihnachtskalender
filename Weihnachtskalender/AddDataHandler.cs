@@ -20,20 +20,20 @@ namespace Weihnachtskalender
         }
 
         public string _lowOpacity = "0.35"; 
+        public string addDataBackroundPicture;
+        public string addDataPictureFolderPath;
 
-        private string _addDataPictureFolderPath;
         private string _addDataFolderPath;
         private string _addDataDateConfigXMLPath;
         private string _adminUserName;
-        public string addDataBackroundPicture;
 
         //Konstrutur
         public AddDataHandler()
         {
             _addDataFolderPath = Directory.GetCurrentDirectory() + "\\AddData";
-            _addDataPictureFolderPath = _addDataFolderPath + "\\Picture";
+            addDataPictureFolderPath = _addDataFolderPath + "\\Picture";
             _addDataDateConfigXMLPath = _addDataFolderPath + "\\DateConfig.xml";
-            addDataBackroundPicture = _addDataPictureFolderPath + "\\Background.bmp";
+            addDataBackroundPicture = addDataPictureFolderPath + "\\Background.bmp";
             _adminUserName = Environment.UserName;
            
         }

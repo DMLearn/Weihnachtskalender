@@ -21,12 +21,12 @@ namespace Weihnachtskalender
     public partial class MainWindow : Window
     {
         Controller controller = new Controller();
-        PictureWindow pictureWindow = new PictureWindow();
 
         //Konstruktor
         public MainWindow()
         {
             InitializeComponent();
+
 
             //Creates Bindings between code behind and xaml
             buttonCanvas.DataContext = controller.addDataHandler.datesList;
@@ -41,14 +41,7 @@ namespace Weihnachtskalender
         {
             int tag = Convert.ToInt16(((Button)sender).Tag);
             controller.start(tag);
-
-            //TODO Warum gibt es einen Fehler wenn PictureWindow ein zweites mal geöffnet wird. 
-            Binding b = new Binding();
-            b.Mode = BindingMode.OneWay;
-            b.Source = new BitmapImage(new Uri(controller.addDataHandler.addDataBackroundPicture, UriKind.Absolute));
-            pictureWindow.dateImage.SetBinding(Image.SourceProperty, b);
-            pictureWindow.Show();
         }
-        
+
     }
 }

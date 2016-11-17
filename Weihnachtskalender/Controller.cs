@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Media.Imaging;
 using System.Windows.Controls;
 
+
 namespace Weihnachtskalender
 {
     class Controller 

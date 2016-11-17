@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Weihnachtskalender"
         mc:Ignorable="d"    
-        Title="Bild des Tages." Height="300" Width="300">
+        Title="Bild des Tages." Height="1000" Width="1000">
     <Grid>
-        <Image x:Name="dateImage"/>
+        <Image x:Name="dateImage" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <RotateTransform Angle="90"/>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 </Window>
